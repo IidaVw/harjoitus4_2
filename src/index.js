@@ -1,14 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';  
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom/client';  // Note the 'react-dom/client' import
+import './index.css';  // Optional: If you want to use styles
+import App from './App';
 
-ReactDOM.render(
+// For React 18+, use createRoot instead of render
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root') 
+  </React.StrictMode>
 );
-
-
-reportWebVitals();

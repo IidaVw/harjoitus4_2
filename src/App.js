@@ -41,10 +41,9 @@ const kiinteistot = [
 ];
 
 function App() {
-  // Otetaan satunnainen kohde aluksi
+
   const [kohde, uusiKohde] = useState(Math.floor(Math.random() * kiinteistot.length));
 
-  // Funktio joka vaihtaa satunnaisen kohteen
   const vaihdaKohde = () => {
     const uusi = Math.floor(Math.random() * kiinteistot.length);
     uusiKohde(uusi);
@@ -60,11 +59,11 @@ function App() {
         style={{ width: "400px", height: "300px", objectFit: "cover", borderRadius: "10px" }}
       />
 
-      <h2>{kiinteistot[kohde].kuvaus}</h2>
       <p><strong>Myyntihinta:</strong> {kiinteistot[kohde].myyntihinta}</p>
+      <h2 style={{ fontSize: "18px" }}>{kiinteistot[kohde].kuvaus}</h2>
 
       <button onClick={vaihdaKohde} style={{ marginTop: "20px", padding: "10px 20px", fontSize: "16px" }}>
-        Näytä satunnainen kohde
+        Vaihda ( ﾉ ﾟｰﾟ)ﾉ
       </button>
     </div>
   );
